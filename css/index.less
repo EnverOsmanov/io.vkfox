@@ -15,7 +15,6 @@
 @headerColor: lighten(@headerBgColor, 55);
 
 html {
-    background: url(imagedoc-darknoise.png);
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 }
 .header {
@@ -31,6 +30,8 @@ html {
     float: left;
 
     &__name {
+        color: @headerColor;
+        text-decoration: none;
         display: inline-block;
         @fontSize: 48px;
         font-size: @fontSize;
@@ -39,8 +40,6 @@ html {
         padding: 2 * @padding;
         text-transform: uppercase;
         /* background: #2ecc71; */
-    }
-    &__vk {
     }
     &__tagline {
         display: none;
@@ -53,7 +52,6 @@ html {
     float: right;
     margin: 0;
     padding: 0;
-    color: @headerColor;
 
     &__item {
         margin: @padding;
@@ -63,8 +61,18 @@ html {
         font-size: @fontSize;
         display: inline-block;
         padding: @padding;
-        color: @headerColor;
         text-transform: uppercase;
+        color: white;
+        cursor: default;
+
+        a {
+            color: @headerColor;
+            text-decoration: none;
+
+            &:hover {
+                color: white;
+            }
+        }
     }
 }
 .description {
@@ -230,5 +238,34 @@ html {
 
     .slide__content {
         text-align: center;
+    }
+}
+.license {
+    background: @peterRiver;
+    text-align: justify;
+
+    h1 {
+        color: white;
+        @fontSize: 45px;
+        font-weight: bold;
+        font-size: @fontSize;
+        line-height: @fontSize;
+        text-align: center;
+        margin: 0;
+        margin-bottom: @headerHeight / 2;
+    }
+
+    h2 {
+        color: white;
+        margin: 0;
+        text-indent: 2 * @padding;
+        font-size: 23px;
+    }
+
+    p {
+        color: lighten(@peterRiver, 45%);
+        margin: 2 * @padding 0;
+        font-size: 18px;
+        text-indent: 2 * @padding;
     }
 }

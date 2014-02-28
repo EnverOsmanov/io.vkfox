@@ -1,3 +1,12 @@
+---
+navigation:
+- text: Главная
+  url: /
+- text: Лицензия
+  url: /license/
+- text: Помощь
+  url: /help/
+---
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,23 +14,26 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
 
-        <link href="css/index.css" media="all" rel="stylesheet" type="text/css" />
-
-        <script src="script.js"></script>
+        <link href="/css/index.css" media="all" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <div class="header">
             <div class="header-brand">
-                <div class="header-brand__name">
-                    <span class="header-brand__vk">VK</span>fox
-                </div>
+                <a class="header-brand__name" href="/"><span class="header-brand__vk">VK</span>fox</a>
                 </br>
                 <div class="header-brand__tagline">Плагин Для Вконтакте</div>
             </div>
             <ul class="navigation">
-                <li class="navigation__item">Главная</li>
-                <li class="navigation__item">Лицензия</li>
-                <li class="navigation__item">Помощь</li>
+            {% assign url = page.url|remove:'index.html' %}
+            {% for item in page.navigation %}
+                <li class="navigation__item">
+                {% if item.url == url %}
+                    {{ item.text }}
+                {% else %}
+                    <a href="{{ item.url }}">{{ item.text }}</a>
+                {% endif %}
+                </li>
+            {% endfor %}
             </ul>
         </div>
         {{ content }}
