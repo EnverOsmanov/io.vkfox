@@ -1,0 +1,7 @@
+{
+  "name": "vkfox_site",
+  "dependencies": {
+    "normalize-css": "~3.0.0",
+    "bootstrap": "~3.1.1"
+  }
+}

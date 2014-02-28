@@ -1,0 +1,234 @@
+@import (less) '../bower_components/normalize-css/normalize.css';
+
+@peterRiver: #3498db;
+@caroot: #e67e22;
+@amethyst: #9b59b6;
+@emerald: #2ecc71;
+@midnightBlue: #2c3e50;
+@silver: #bdc3c7;
+@clouds: #ecf0f1;
+
+@padding: 10px;
+@contentWidth: 980px;
+@headerHeight: 90px;
+@headerBgColor: @midnightBlue;
+@headerColor: lighten(@headerBgColor, 55);
+
+html {
+    background: url(imagedoc-darknoise.png);
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
+.header {
+    background: @headerBgColor;
+    overflow: hidden;
+    padding: 0 2 * @padding;
+}
+.header-brand {
+    color: @headerColor;
+    font-weight: 100;
+    font-weight: bold;
+    overflow: hidden;
+    float: left;
+
+    &__name {
+        display: inline-block;
+        @fontSize: 48px;
+        font-size: @fontSize;
+        line-height: @fontSize;
+        /* margin: @padding; */
+        padding: 2 * @padding;
+        text-transform: uppercase;
+        /* background: #2ecc71; */
+    }
+    &__vk {
+    }
+    &__tagline {
+        display: none;
+        font-size: 16px;
+        margin-top: 0;
+    }
+}
+.navigation {
+    display: block;
+    float: right;
+    margin: 0;
+    padding: 0;
+    color: @headerColor;
+
+    &__item {
+        margin: @padding;
+        padding: 0;
+        @fontSize: 19px;
+        line-height: @fontSize;
+        font-size: @fontSize;
+        display: inline-block;
+        padding: @padding;
+        color: @headerColor;
+        text-transform: uppercase;
+    }
+}
+.description {
+    overflow: hidden;
+    padding-right: @headerHeight / 2;
+    @fontSize: 23px;
+    font-size: @fontSize;
+    color: lighten(@peterRiver, 45%);
+
+    &__title {
+        color: white;
+        margin-bottom: @headerHeight / 2;
+        @fontSize: 45px;
+        font-weight: bold;
+        font-size: @fontSize;
+        line-height: @fontSize;
+    }
+
+    &__button {
+        margin-top: @headerHeight / 2;
+    }
+}
+.install-button {
+    font-size: 27px;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    @border: 3px;
+    display: inline-block;
+    background: @emerald;
+    border-radius: @border;
+    padding: @padding 2 * @padding;
+    border-bottom: @border solid darken(@emerald, 15%);
+    color: darken(@emerald, 25);
+}
+.brand-image {
+    float: right;
+    display: block;
+    width: @contentWidth / 2;
+}
+
+.slide {
+    &__content {
+        padding: @headerHeight 0;
+        width: @contentWidth;
+        margin: auto;
+        overflow: hidden;
+}
+}
+.main {
+    background: @peterRiver;
+}
+.features {
+    background: @clouds;
+}
+.grid {
+    &_type_features {
+        .grid__cell {
+            width: 50%;
+        }
+    }
+    &__row  {
+        overflow: hidden;
+
+        & + .grid__row  {
+            margin-top: @headerHeight;
+        }
+    }
+    &__cell {
+        float: left;
+    }
+}
+.feature {
+    overflow: hidden;
+    padding-right: @headerHeight;
+    box-sizing: border-box;
+    color: #2c3e50;
+
+    &__image {
+        float: left;
+        margin-right: 2 * @padding;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 23px;
+        overflow: hidden;
+        margin-bottom: 2 * @padding;
+    }
+    &__description {
+        overflow: hidden;
+        font-size: 18px;
+    }
+}
+.social-proof {
+    background: @peterRiver;
+
+    &__group {
+        float: left;
+    }
+    &__reviews {
+        overflow: hidden;
+    }
+    &__title {
+        @fontSize: 45px;
+        color: white;
+        font-weight: bold;
+        font-size: @fontSize;
+        line-height: @fontSize;
+        text-align: center;
+        margin-bottom: @headerHeight;
+    }
+    &__button {
+        margin-top : @headerHeight;
+        text-align: center;
+    }
+}
+.review {
+    margin-left: @headerHeight;
+    color: @clouds;
+
+    & + .review {
+        margin-top: @headerHeight / 2;
+    }
+
+    &__image {
+        width: @headerHeight;
+        height: @headerHeight;
+        background-size: cover;
+        border-radius: @headerHeight / 2;
+        float: left;
+        margin-right: 2 * @padding;
+    }
+    &__content {
+        overflow: hidden;
+    }
+    &__body {
+        font-size: 18px;
+        font-style: italic;
+
+        &:before {
+            content: '“ ';
+            font-size: 30px;
+            line-height: 18px;
+            vertical-align: bottom;
+        }
+        &:after {
+            content: ' ”';
+            font-size: 30px;
+            line-height: 18px;
+            vertical-align: bottom;
+        }
+    }
+    &__author {
+        text-align: right;
+        font-weight: bold;
+        font-size: 16px;
+    }
+}
+.thanks {
+    background: @clouds;
+    font-size: 56px;
+    color: @silver;
+
+    .slide__content {
+        text-align: center;
+    }
+}
