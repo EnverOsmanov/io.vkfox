@@ -24,14 +24,12 @@ navigation:
                 <div class="header-brand__tagline">Плагин Для Вконтакте</div>
             </div>
             <ul class="navigation">
-            {% assign url = page.url|remove:'index.html' %}
+            {% assign url = page.url|remove:'index.html'|remove:'/' %}
             {% for item in page.navigation %}
-                <li class="navigation__item">
-                {% if item.url == url %}
-                    {{ item.text }}
-                {% else %}
+                {% assign itemUrl = item.url|remove:'/' %}
+                <li
+                    class="navigation__item {% if itemUrl == url or page.categories contains itemUrl %}navigation__item_selected_yes{% endif %}">
                     <a href="{{ item.url }}">{{ item.text }}</a>
-                {% endif %}
                 </li>
             {% endfor %}
             </ul>

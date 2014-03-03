@@ -16,6 +16,24 @@
 
 html {
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    background: @clouds;
+}
+h1 {
+    @fontSize: 45px;
+    font-weight: bold;
+    font-size: @fontSize;
+    line-height: @fontSize;
+    margin: 0;
+    margin-bottom: @headerHeight / 2;
+}
+h2 {
+    margin: 0;
+    font-size: 23px;
+}
+p {
+    margin: 2 * @padding 0;
+    font-size: 18px;
+    text-indent: 2 * @padding;
 }
 .header {
     background: @headerBgColor;
@@ -36,10 +54,12 @@ html {
         @fontSize: 48px;
         font-size: @fontSize;
         line-height: @fontSize;
-        /* margin: @padding; */
         padding: 2 * @padding;
         text-transform: uppercase;
-        /* background: #2ecc71; */
+
+        &:hover {
+            color: white;
+        }
     }
     &__tagline {
         display: none;
@@ -62,7 +82,6 @@ html {
         display: inline-block;
         padding: @padding;
         text-transform: uppercase;
-        color: white;
         cursor: default;
 
         a {
@@ -72,6 +91,9 @@ html {
             &:hover {
                 color: white;
             }
+        }
+        &_selected_yes a {
+            color: white;
         }
     }
 }
@@ -120,7 +142,8 @@ html {
         width: @contentWidth;
         margin: auto;
         overflow: hidden;
-}
+        font-size: 18px;
+    }
 }
 .main {
     background: @peterRiver;
@@ -233,39 +256,82 @@ html {
 }
 .thanks {
     background: @clouds;
-    font-size: 56px;
     color: @silver;
 
     .slide__content {
+        font-size: 56px;
         text-align: center;
     }
 }
 .license {
-    background: @peterRiver;
+    background: @emerald;
+    color: white;
     text-align: justify;
 
     h1 {
-        color: white;
-        @fontSize: 45px;
-        font-weight: bold;
-        font-size: @fontSize;
-        line-height: @fontSize;
         text-align: center;
-        margin: 0;
-        margin-bottom: @headerHeight / 2;
     }
 
     h2 {
-        color: white;
-        margin: 0;
         text-indent: 2 * @padding;
-        font-size: 23px;
+    }
+}
+.help {
+    background: @clouds;
+    color: @midnightBlue;
+    text-align: justify;
+    padding-bottom: 2 * @headerHeight;
+
+    h1 {
+        margin-left: 4 * @padding;
+    }
+}
+.questions {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+
+    &__link {
+        text-decoration: none;
+        color: @midnightBlue;
+        line-height: 45px;
+
+        &:before {
+            -webkit-transition: all 0.1s ease;  /* Chrome 1-25, Safari 3.2+ */
+            -moz-transition: all 0.1s ease;  /* Firefox 4-15 */
+            -o-transition: all 0.1s ease;  /* Opera 10.50–12.00 */
+            transition: all 0.1s ease;
+
+            line-height: 45px;
+            vertical-align: middle;
+            display: inline-block;
+            width: @padding;
+            height: @padding;
+            border-radius: @padding / 2;
+            background: @midnightBlue;
+            content: '';
+            margin-right: 3 * @padding;
+        }
+
+        &:hover:before {
+            margin-right: 2 * @padding;
+            margin-left: @padding;
+        }
+    }
+}
+.post {
+    background: @clouds;
+    color: @midnightBlue;
+
+    h1 {
+        margin-left: 4 * @padding;
     }
 
-    p {
-        color: lighten(@peterRiver, 45%);
-        margin: 2 * @padding 0;
-        font-size: 18px;
-        text-indent: 2 * @padding;
+    a {
+        color: @peterRiver;
+
+        &:visited {
+            color: @amethyst;
+        }
     }
 }
