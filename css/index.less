@@ -129,6 +129,17 @@ p {
     padding: @padding 2 * @padding;
     border-bottom: @border solid darken(@emerald, 15%);
     color: darken(@emerald, 25);
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+
+    &:active {
+        border-bottom: 0;
+        position: relative;
+        top: @border;
+        margin-bottom: @border;
+    }
 }
 .brand-image {
     float: right;
