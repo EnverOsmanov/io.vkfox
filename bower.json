@@ -2,6 +2,7 @@
   "name": "vkfox_site",
   "dependencies": {
     "normalize-css": "~3.0.0",
-    "bootstrap": "~3.1.1"
+    "bootstrap": "~3.1.1",
+    "bowser": "~0.6.0"
   }
 }

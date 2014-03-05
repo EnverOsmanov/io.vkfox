@@ -1,8 +1,10 @@
 @import (less) '../bower_components/normalize-css/normalize.css';
 
 @peterRiver: #3498db;
+@belizeHole: #2980b9;
 @caroot: #e67e22;
 @amethyst: #9b59b6;
+@wisteria: #8e44ad;
 @emerald: #2ecc71;
 @midnightBlue: #2c3e50;
 @silver: #bdc3c7;
@@ -30,6 +32,21 @@ h2 {
     margin: 0;
     font-size: 23px;
 }
+a {
+    color: @belizeHole;
+
+    &:hover {
+        color: @peterRiver;
+    }
+
+    &:visited {
+        color: @wisteria;
+
+        &:hover {
+            color: @amethyst;
+        }
+    }
+}
 p {
     margin: 2 * @padding 0;
     font-size: 18px;
@@ -48,7 +65,7 @@ p {
     float: left;
 
     &__name {
-        color: @headerColor;
+        color: @headerColor !important;
         text-decoration: none;
         display: inline-block;
         @fontSize: 48px;
@@ -58,7 +75,7 @@ p {
         text-transform: uppercase;
 
         &:hover {
-            color: white;
+            color: white !important;
         }
     }
     &__tagline {
@@ -120,6 +137,7 @@ p {
 .install-button {
     font-size: 27px;
     text-transform: uppercase;
+    text-decoration: none;
     margin-left: auto;
     margin-right: auto;
     @border: 3px;
@@ -128,7 +146,7 @@ p {
     border-radius: @border;
     padding: @padding 2 * @padding;
     border-bottom: @border solid darken(@emerald, 15%);
-    color: darken(@emerald, 25);
+    color: darken(@emerald, 25) !important;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -304,7 +322,6 @@ p {
 
     &__link {
         text-decoration: none;
-        color: @midnightBlue;
         line-height: 45px;
 
         &:before {
@@ -336,13 +353,5 @@ p {
 
     h1 {
         margin-left: 4 * @padding;
-    }
-
-    a {
-        color: @peterRiver;
-
-        &:visited {
-            color: @amethyst;
-        }
     }
 }
