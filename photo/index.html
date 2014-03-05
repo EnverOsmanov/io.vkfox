@@ -1,0 +1,25 @@
+---
+layout: default
+title: VKfox - Изображение
+---
+<div class="header">
+    <div class="header-brand">
+        <a class="header-brand__name" href="/"><span class="header-brand__vk">VK</span>fox</a>
+        </br>
+        <div class="header-brand__tagline">Плагин Для Вконтакте</div>
+    </div>
+    <div class="download-image-wrap">
+        <a class="button button_type_download" download="">Сохранить</a>
+    </div>
+</div>
+<img class="placeholder" src="" alt="">
+<img class="image" src="" alt="">
+<script>
+    var imageUrl = atob(location.hash.replace('#', ''));
+
+    Array.prototype.forEach.call(document.querySelectorAll('img'), function (img) {
+        img.setAttribute('src', imageUrl);
+    });
+    document.querySelector('.button').setAttribute('href', imageUrl);
+</script>
+

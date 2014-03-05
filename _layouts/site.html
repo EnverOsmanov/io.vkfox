@@ -1,0 +1,28 @@
+---
+layout: default
+navigation:
+- text: Главная
+  url: /
+- text: Лицензия
+  url: /license/
+- text: Помощь
+  url: /help/
+---
+<div class="header">
+    <div class="header-brand">
+        <a class="header-brand__name" href="/"><span class="header-brand__vk">VK</span>fox</a>
+        </br>
+        <div class="header-brand__tagline">Плагин Для Вконтакте</div>
+    </div>
+    <ul class="navigation">
+    {% assign url = page.url|remove:'index.html'|remove:'/' %}
+    {% for item in page.navigation %}
+        {% assign itemUrl = item.url|remove:'/' %}
+        <li
+            class="navigation__item {% if itemUrl == url or page.categories contains itemUrl %}navigation__item_selected_yes{% endif %}">
+            <a href="{{ item.url }}">{{ item.text }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+{{ content }}

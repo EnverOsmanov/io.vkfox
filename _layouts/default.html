@@ -1,12 +1,3 @@
----
-navigation:
-- text: Главная
-  url: /
-- text: Лицензия
-  url: /license/
-- text: Помощь
-  url: /help/
----
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,26 +5,11 @@ navigation:
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
 
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <link href="/css/index.css" media="all" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <div class="header">
-            <div class="header-brand">
-                <a class="header-brand__name" href="/"><span class="header-brand__vk">VK</span>fox</a>
-                </br>
-                <div class="header-brand__tagline">Плагин Для Вконтакте</div>
-            </div>
-            <ul class="navigation">
-            {% assign url = page.url|remove:'index.html'|remove:'/' %}
-            {% for item in page.navigation %}
-                {% assign itemUrl = item.url|remove:'/' %}
-                <li
-                    class="navigation__item {% if itemUrl == url or page.categories contains itemUrl %}navigation__item_selected_yes{% endif %}">
-                    <a href="{{ item.url }}">{{ item.text }}</a>
-                </li>
-            {% endfor %}
-            </ul>
-        </div>
         {{ content }}
     </body>
 </html>

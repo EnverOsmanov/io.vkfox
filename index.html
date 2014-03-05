@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: site
 title: VKfox - лучший плагин для Вконтакте
 ---
 <div class="slide main">
@@ -8,7 +8,7 @@ title: VKfox - лучший плагин для Вконтакте
         <div class="description">
             <div class="description__title">Лучший плагин для Вконтакте</div>
             С VKfox вы всегда в курсе новостей ВКонтакте, даже оставаясь оффлайн! Вести беседы или следить за онлайном друзей стало еще проще!
-            <a class="description__button install-button">Установить</a>
+            <a class="description__button button button_type_install">Установить</a>
         </div>
     </div>
 </div>
@@ -75,7 +75,7 @@ title: VKfox - лучший плагин для Вконтакте
             </div>
         </div>
         <div class="social-proof__button">
-            <a class="install-button">Установить</a>
+            <a class="button button_type_install">Установить</a>
         </div>
     </div>
 </div>
@@ -92,7 +92,7 @@ title: VKfox - лучший плагин для Вконтакте
     } else if (bowser.firefox) {
         installPath = 'https://addons.mozilla.org/ru/firefox/addon/vkfox/';
     } else {
-        installPath = '/install';
+        installPath = 'https://addons.opera.com/ru/developer/upgrade/vkfox-plagin-dlia-vkontakte/';
     }
     Array.prototype.forEach.call(document.querySelectorAll('.install-button'), function (button) {
         button.setAttribute('href', installPath);
