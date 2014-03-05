@@ -16,9 +16,12 @@
 @headerBgColor: @midnightBlue;
 @headerColor: lighten(@headerBgColor, 55);
 
+@desktopThreshold: 1200px;
+
 html {
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     background: @clouds;
+    min-width: 1024px;
     height: 100%;
 }
 body {
@@ -61,7 +64,13 @@ p {
 .header {
     background: @headerBgColor;
     overflow: hidden;
-    padding: 0 2 * @padding;
+    padding: 0 4 * @padding;
+
+    @media (max-width: @desktopThreshold) {
+        & {
+            padding: 0 2 * @padding;
+        }
+    }
 }
 .header-brand {
     color: @headerColor;
@@ -69,6 +78,8 @@ p {
     font-weight: bold;
     overflow: hidden;
     float: left;
+    line-height: @headerHeight;
+    height: @headerHeight;
 
     &__name {
         color: @headerColor !important;
@@ -76,18 +87,11 @@ p {
         display: inline-block;
         @fontSize: 48px;
         font-size: @fontSize;
-        line-height: @fontSize;
-        padding: 2 * @padding;
         text-transform: uppercase;
 
         &:hover {
             color: white !important;
         }
-    }
-    &__tagline {
-        display: none;
-        font-size: 16px;
-        margin-top: 0;
     }
 }
 .navigation {
@@ -95,6 +99,8 @@ p {
     float: right;
     margin: 0;
     padding: 0;
+    height: @headerHeight;
+    line-height: @headerHeight;
 
     &__item {
         margin: @padding;
@@ -155,6 +161,18 @@ p {
     -moz-user-select: none;
     user-select: none;
 
+    &__icon {
+        display: none;
+    }
+    @media (max-width: @desktopThreshold) {
+        &__text {
+            display: none;
+        }
+        &__icon {
+            display: inline;
+        }
+    }
+
     &:active {
         border-bottom: 0;
         position: relative;
@@ -171,6 +189,7 @@ p {
         background: darken(@midnightBlue, 5%);
         border-bottom: @border solid darken(@midnightBlue, 10%);
         color: @headerColor !important;
+
     }
     &_type_install {
         font-size: 27px;
@@ -380,7 +399,7 @@ p {
 }
 .placeholder {
     visibility: hidden;
-    padding-bottom: @headerHeight;
+    padding-bottom: 2 * @headerHeight;
     max-width: 100%;
     display: block;
 }
@@ -397,4 +416,20 @@ p {
     height: @headerHeight;
     line-height: @headerHeight;
     float: right;
+}
+.banner {
+    float: left;
+    padding: (@headerHeight - 90px)/2 0;
+    margin-left: 4 * @padding;
+
+    @media (max-width: @desktopThreshold) {
+        & {
+            margin-left: 2 * @padding;
+        }
+    }
+
+
+    img {
+        display: block;
+    }
 }
