@@ -696,7 +696,7 @@ p {
   visibility: hidden;
   padding-bottom: 110px;
   max-width: 100%;
-  display: block;
+  display: none;
 }
 .image {
   position: absolute;
@@ -706,6 +706,7 @@ p {
   right: 0;
   margin: auto;
   max-width: 100%;
+  max-height: calc(100% - 200px);
 }
 .video {
   position: absolute;
