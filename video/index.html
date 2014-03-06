@@ -1,0 +1,18 @@
+---
+layout: default
+title: VKfox - Видео
+---
+<div class="header">
+    <div class="header-brand">
+        <a class="header-brand__name" href="/"><span class="header-brand__vk">VK</span>fox</a>
+    </div>
+    <div class="banner">
+        <img src="http://www.mstreatmentcenter.com/PublishingImages/2011-Walk-MS-Leaderboard-Banner-728x90_Final.gif" alt="">
+    </div>
+</div>
+<iframe class="video" src="" frameborder="0"></iframe>
+<script>
+    var videoUrl = atob(location.hash.replace('#', ''));
+
+    document.querySelector('.video').setAttribute('src', videoUrl);
+</script>
