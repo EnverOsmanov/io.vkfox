@@ -705,6 +705,8 @@ p {
 .image-area__placeholder {
   visibility: hidden;
   max-width: 100%;
+  max-height: calc(100% - 90px);
+  max-height: -webkit-calc(100% - 90px);
   display: block;
 }
 .image-area__image {
