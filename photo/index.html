@@ -17,13 +17,15 @@ title: VKfox - Изображение
         </a>
     </div>
 </div>
-<img class="placeholder" src="" alt="">
-<img class="image" src="" alt="">
+<div class="image-area">
+    <img class="image-area__placeholder" src="" alt="">
+    <img class="image-area__image" src="" alt="">
+</div>
 <script>
     var imageUrl = atob(location.hash.replace('#', ''));
 
-    document.querySelector('.placeholder').setAttribute('src', imageUrl);
-    document.querySelector('.image').setAttribute('src', imageUrl);
+    document.querySelector('.image-area__placeholder').setAttribute('src', imageUrl);
+    document.querySelector('.image-area__image').setAttribute('src', imageUrl);
     document.querySelector('.button').setAttribute('href', imageUrl);
 </script>
 
