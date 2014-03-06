@@ -13,4 +13,4 @@ categories: [help]
 Способ II
 
 1. Зайти на страницу комментариев [https://vk.com/feed?section=comments](https://vk.com/feed?section=comments)
-2. Нажать на хрестик возле ненужного сообщений
+2. Нажать на крестик возле ненужного сообщений
