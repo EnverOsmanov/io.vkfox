@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>VKfox - лучший плагин для Вконтакте</title>
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link href="/css/index.css" media="all" rel="stylesheet" type="text/css" />
+
+        <meta name="keywords" content="скачать vk, вконтакте оффлайн, vk плагин"></meta>
+        <meta name="description" content="Основная задача VKfox - это уведомлять о всех ваших обновлениях на Вконтакте, и дать возможность быстрого просмотра или ответа на них прямо из расширения. Что делает его просто не заменимым на работе или дома."/>
+    </head>
+    <body>
+        <div class="header">
+    <div class="header-brand">
+        <a class="header-brand__name" href="/"><span class="header-brand__vk">VK</span>fox</a>
+    </div>
+    <ul class="navigation">
+    
+    
+        
+        <li
+            class="navigation__item navigation__item_selected_yes">
+            <a href="/">Главная</a>
+        </li>
+    
+        
+        <li
+            class="navigation__item ">
+            <a href="/license/">Лицензия</a>
+        </li>
+    
+        
+        <li
+            class="navigation__item ">
+            <a href="/help/">Помощь</a>
+        </li>
+    
+    </ul>
+</div>
+<div class="slide main">
+    <div class="slide__content">
+        <img class="brand-image" src="/images/brand.png" alt="">
+        <div class="description">
+            <div class="description__title">Лучший плагин для Вконтакте</div>
+            Общайся, следи за онлайн-статусом своих друзей и наслаждайся простотой и функциональностью VKfox!
+            </br><a class="description__button button button_type_install">Установить</a>
+        </div>
+    </div>
+</div>
+<div class="slide features">
+    <div class="slide__content">
+        <div class="grid grid_type_features">
+            <div class="grid__row">
+                <div class="grid__cell feature">
+                    <img class="feature__image" src="/images/comments.png" alt="" href="">
+                    <div class="feature__title">Общение стало еще удобнее!</div>
+                    <div class="feature__description">Забудь про обновление сразу нескольких вкладок! Ответы, комментарии, диалоги - с VKfox ты легко найдешь все в одном месте</div>
+                </div>
+                <div class="grid__cell feature">
+                    <img class="feature__image" src="/images/camera.png" alt="" href="">
+                    <div class="feature__title">Следи за друзьями без усилий!</div>
+                    <div class="feature__description">VKfox поможет не упустить из виду вход и выход из сети избранных людей или друзей из закладок</div>
+                </div>
+            </div>
+            <div class="grid__row">
+                <div class="grid__cell feature">
+                    <img class="feature__image" src="/images/clock.png" alt="" href="">
+                    <div class="feature__title">Будь в курсе</div>
+                    <div class="feature__description">Следи за новостями, лайками, ответами и всем-всем-всем даже находясь оффлайн!</div>
+                </div>
+                <div class="grid__cell feature">
+                    <img class="feature__image" src="/images/arrows.png" alt="" href="">
+                    <div class="feature__title">Экономь свое время!</div>
+                    <div class="feature__description">Больше никакого ожидания ответов - VKfox мгновенно уведомляет пользователя!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="slide social-proof">
+    <div class="slide__content">
+        <div class="social-proof__title">Наши пользователи</div>
+        <div class="social-proof__group">
+            <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?1"></script>
+            <!-- VK Widget -->
+            <div id="vk_groups"></div>
+            <script type="text/javascript">
+                VK.Widgets.Group("vk_groups", {mode: 0, width: "255"}, 10959001);
+            </script>
+        </div>
+        <div class="social-proof__reviews">
+            <div class="review">
+                <div class="review__image" style="background-image: url(/images/Artem_Bay.jpg);"></div>
+                <div class="review__body">Клевый плагин. Стало гораздо удобнее с интерфейсом в стиле flat ui) Ставлю Лайк!</div>
+                <div class="review__author">Артем Бей</div>
+            </div>
+            <div class="review">
+                <div class="review__image" style="background-image: url(/images/Masha_Shirochenko.jpg);"></div>
+                <div class="review__content">
+                    <div class="review__body">Очень удобная программа, с тех пор как установила не представляю пользование ВК без нее</div>
+                    <div class="review__author">Маша Широченко</div>
+                </div>
+            </div>
+            <div class="review">
+                <div class="review__image" style="background-image: url(/images/Max_Bondarenko.jpg);"></div>
+                <div class="review__content">
+                    <div class="review__body">Использую на работе! Теперь у меня есть возможность ответить друзьям, не заходя в ВК!</div>
+                    <div class="review__author">Макс Бондаренко</div>
+                </div>
+            </div>
+        </div>
+        <div class="social-proof__button">
+            <a class="button button_type_install">Установить</a>
+        </div>
+    </div>
+</div>
+<div class="slide thanks">
+    <div class="slide__content">Счастливо!</div>
+</div>
+<script src="js/bower.js"></script>
+<script>
+    var installPath;
+    if (bowser.chrome) {
+        installPath = 'https://chrome.google.com/webstore/detail/vkfox-–-плагин-для-вконта/adfbpongjnbjgbnjlahkoekcfnfjnnfa';
+    } else if (bowser.opera) {
+        installPath = 'https://addons.opera.com/ru/developer/upgrade/vkfox-plagin-dlia-vkontakte/';
+    } else if (bowser.firefox) {
+        installPath = '/download/vkfox-5.1.8-fx.xpi';
+    } else {
+        installPath = 'https://addons.opera.com/ru/developer/upgrade/vkfox-plagin-dlia-vkontakte/';
+    }
+    Array.prototype.forEach.call(document.querySelectorAll('.button_type_install'), function (button) {
+        button.setAttribute('href', installPath);
+    });
+</script>
+
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-9568575-5', 'vkfox.io');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
