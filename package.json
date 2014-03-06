@@ -1,0 +1,7 @@
+{
+  "name": "vkfox.io",
+  "dependencies": {
+    "grunt": "~0.4.2",
+    "grunt-gh-pages": "~0.9.1"
+  }
+}
