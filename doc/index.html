@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>VKfox - Видео</title>
+        <title>VKfox - Документ</title>
 
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -23,32 +23,27 @@
         <a class="header-brand__name" href="/"><span class="header-brand__vk">VK</span>fox</a>
     </div>
     <div class="banner">
-        <img src="http://www.mstreatmentcenter.com/PublishingImages/2011-Walk-MS-Leaderboard-Banner-728x90_Final.gif" alt="">
+        <!-- <img src="http://www.mstreatmentcenter.com/PublishingImages/2011-Walk-MS-Leaderboard-Banner-728x90_Final.gif" alt=""> -->
+        <img src="http://static.springer.com/sgw/documents/1330530/image/gif/Banner_Leaderboard_0075-8450_728x90px.gif" alt="">
     </div>
     <div class="media-controls">
-        <span class="button button_type_media" download="">
-            <span class="button__icon">⌊⌉</span>
-            <span class="button__text">Увеличить</span>
-        </span>
+        <a class="button button_type_media" download="">
+            <span class="button__icon">↓</span>
+            <span class="button__text">Сохранить</span>
+        </a>
     </div>
 </div>
-<iframe class="video" src="" frameborder="0"></iframe>
+<div class="doc-area">
+    <iframe class="doc" src="" frameborder="0"></iframe>
+</div>
 <script>
-    var LARGE_PLAYER = 'large-player',
-        videoUrl = window.atob(location.hash.replace('#', ''));
+    var GOOGLE_VIEWER_URL = 'http://docs.google.com/viewer?embedded=true&url=',
+        imageUrl = window.atob(location.hash.replace('#', ''));
 
-    document.querySelector('.video').setAttribute('src', videoUrl);
-    document.querySelector('.button').onclick = function () {
-        var body = document.body;
-
-        if (~body.className.indexOf(LARGE_PLAYER)) {
-            body.className = body.className.replace(LARGE_PLAYER, '');
-        } else {
-            body.className += ' ' + LARGE_PLAYER;
-        }
-    };
-
+    document.querySelector('.doc').setAttribute('src', GOOGLE_VIEWER_URL + encodeURIComponent(imageUrl));
+    document.querySelector('.button').setAttribute('href', imageUrl);
 </script>
+
 
 
         <script>

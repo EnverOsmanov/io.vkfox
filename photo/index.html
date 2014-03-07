@@ -15,7 +15,10 @@
         <meta name="application-name" content="Установить VKfox" />
     </head>
     <body>
-        <div class="header">
+        <![if lt IE 10]>
+<script src="/js/base64.js"></script>
+<![endif]>
+<div class="header">
     <div class="header-brand">
         <a class="header-brand__name" href="/"><span class="header-brand__vk">VK</span>fox</a>
     </div>
@@ -23,8 +26,8 @@
         <!-- <img src="http://www.mstreatmentcenter.com/PublishingImages/2011-Walk-MS-Leaderboard-Banner-728x90_Final.gif" alt=""> -->
         <img src="http://static.springer.com/sgw/documents/1330530/image/gif/Banner_Leaderboard_0075-8450_728x90px.gif" alt="">
     </div>
-    <div class="download-image-wrap">
-        <a class="button button_type_download" download="">
+    <div class="media-controls">
+        <a class="button button_type_media" download="">
             <span class="button__icon">↓</span>
             <span class="button__text">Сохранить</span>
         </a>
@@ -35,12 +38,13 @@
     <img class="image-area__image" src="" alt="">
 </div>
 <script>
-    var imageUrl = atob(location.hash.replace('#', ''));
+    var imageUrl = window.atob(location.hash.replace('#', ''));
 
     document.querySelector('.image-area__placeholder').setAttribute('src', imageUrl);
     document.querySelector('.image-area__image').setAttribute('src', imageUrl);
     document.querySelector('.button').setAttribute('href', imageUrl);
 </script>
+
 
 
         <script>
