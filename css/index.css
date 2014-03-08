@@ -376,6 +376,7 @@ h2 {
 }
 a {
   color: #2980b9;
+  text-decoration: none;
 }
 a:hover {
   color: #3498db;
@@ -412,7 +413,6 @@ p {
 }
 .header-brand__name {
   color: #bbcada !important;
-  text-decoration: none;
   display: inline-block;
   font-size: 48px;
   text-transform: uppercase;
@@ -440,7 +440,6 @@ p {
 }
 .navigation__item a {
   color: #bbcada;
-  text-decoration: none;
 }
 .navigation__item a:hover {
   color: white;
@@ -661,7 +660,6 @@ p {
   font-size: 30px;
 }
 .questions__link {
-  text-decoration: none;
   line-height: 45px;
 }
 .questions__link:before {
@@ -766,4 +764,73 @@ p {
 }
 .banner img {
   display: block;
+}
+.error-404 {
+  overflow: hidden;
+  margin: auto;
+  margin-top: 180px;
+  text-align: center;
+}
+.error-404__number {
+  line-height: 150px;
+  font-size: 150px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.error-404__number_color_green {
+  color: #2ecc71;
+}
+.error-404__number_color_blue {
+  color: #3498db;
+}
+.error-404__ghost {
+  display: inline-block;
+  vertical-align: middle;
+}
+.error-404 .ghost .ghost__head {
+  border-radius: 60px;
+  background: #e74c3c;
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
+.error-404 .ghost .ghost__eyes {
+  margin: auto;
+  overflow: hidden;
+  position: absolute;
+  left: 36px;
+  top: 36px;
+}
+.error-404 .ghost .ghost__eyes .ghost__eye {
+  border-radius: 12px;
+  width: 24px;
+  height: 24px;
+  background: #ecf0f1;
+  float: left;
+}
+.error-404 .ghost .ghost__body {
+  margin-top: -60px;
+  height: 90px;
+  width: 120px;
+  background: #e74c3c;
+  position: relative;
+}
+.error-404 .ghost .ghost__triangles {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.error-404 .ghost .ghost__triangle {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #ecf0f1;
+  bottom: 0;
+  float: left;
+}
+.error-404__message {
+  margin-top: 10px;
+  color: #2c3e50;
+  font-size: 23px;
 }
