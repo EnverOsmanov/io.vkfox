@@ -356,7 +356,6 @@ html {
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
   background: #ecf0f1;
   min-width: 1024px;
-  min-height: 660px;
   height: 100%;
 }
 body {
@@ -742,6 +741,9 @@ p {
   padding: 0;
   width: 100%;
   height: 100%;
+}
+.large-player {
+  min-height: 660px;
 }
 .large-player .video {
   width: 854px;

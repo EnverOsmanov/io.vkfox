@@ -15,9 +15,9 @@
         <meta name="application-name" content="Установить VKfox" />
     </head>
     <body>
-        <![if lt IE 10]>
-<script src="/js/base64.js"></script>
-<![endif]>
+        <!--[if lt IE 10]>
+    <script src="/js/base64.js"></script>
+<![endif]-->
 <div class="header">
     <div class="header-brand">
         <a class="header-brand__name" href="/"><span class="header-brand__vk">VK</span>fox</a>
@@ -38,10 +38,10 @@
 </div>
 <script>
     var GOOGLE_VIEWER_URL = 'http://docs.google.com/viewer?embedded=true&url=',
-        imageUrl = window.atob(location.hash.replace('#', ''));
+        docUrl = window.atob(location.hash.replace('#', ''));
 
-    document.querySelector('.doc').setAttribute('src', GOOGLE_VIEWER_URL + encodeURIComponent(imageUrl));
-    document.querySelector('.button').setAttribute('href', imageUrl);
+    document.querySelector('.doc').setAttribute('src', GOOGLE_VIEWER_URL + encodeURIComponent(docUrl));
+    document.querySelector('.button').setAttribute('href', docUrl);
 </script>
 
 
