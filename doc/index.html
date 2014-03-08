@@ -1,6 +1,6 @@
 ---
 layout: media
-title: VKfox - Изображение
+title: VKfox - Документ
 ---
 <div class="header">
     <div class="header-brand">
@@ -17,15 +17,14 @@ title: VKfox - Изображение
         </a>
     </div>
 </div>
-<div class="image-area">
-    <img class="image-area__placeholder" src="" alt="">
-    <img class="image-area__image" src="" alt="">
+<div class="doc-area">
+    <iframe class="doc" src="" frameborder="0"></iframe>
 </div>
 <script>
-    var imageUrl = window.atob(location.hash.replace('#', ''));
+    var GOOGLE_VIEWER_URL = 'http://docs.google.com/viewer?embedded=true&url=',
+        docUrl = window.atob(location.hash.replace('#', ''));
 
-    document.querySelector('.image-area__placeholder').setAttribute('src', imageUrl);
-    document.querySelector('.image-area__image').setAttribute('src', imageUrl);
-    document.querySelector('.button').setAttribute('href', imageUrl);
+    document.querySelector('.doc').setAttribute('src', GOOGLE_VIEWER_URL + encodeURIComponent(docUrl));
+    document.querySelector('.button').setAttribute('href', docUrl);
 </script>
 

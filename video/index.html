@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: media
 title: VKfox - Видео
 ---
 <div class="header">
@@ -9,10 +9,27 @@ title: VKfox - Видео
     <div class="banner">
         <img src="http://www.mstreatmentcenter.com/PublishingImages/2011-Walk-MS-Leaderboard-Banner-728x90_Final.gif" alt="">
     </div>
+    <div class="media-controls">
+        <span class="button button_type_media" download="">
+            <span class="button__icon">⌊⌉</span>
+            <span class="button__text">Увеличить</span>
+        </span>
+    </div>
 </div>
 <iframe class="video" src="" frameborder="0"></iframe>
 <script>
-    var videoUrl = atob(location.hash.replace('#', ''));
+    var LARGE_PLAYER = 'large-player',
+        videoUrl = window.atob(location.hash.replace('#', ''));
 
     document.querySelector('.video').setAttribute('src', videoUrl);
+    document.querySelector('.button').onclick = function () {
+        var body = document.body;
+
+        if (~body.className.indexOf(LARGE_PLAYER)) {
+            body.className = body.className.replace(LARGE_PLAYER, '');
+        } else {
+            body.className += ' ' + LARGE_PLAYER;
+        }
+    };
+
 </script>
