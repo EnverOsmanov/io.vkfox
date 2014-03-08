@@ -9,6 +9,7 @@
 @midnightBlue: #2c3e50;
 @silver: #bdc3c7;
 @clouds: #ecf0f1;
+@alizarin: #e74c3c;
 
 @padding: 10px;
 @contentWidth: 980px;
@@ -43,6 +44,7 @@ h2 {
 }
 a {
     color: @belizeHole;
+    text-decoration: none;
 
     &:hover {
         color: @peterRiver;
@@ -83,7 +85,6 @@ p {
 
     &__name {
         color: @headerColor !important;
-        text-decoration: none;
         display: inline-block;
         @fontSize: 48px;
         font-size: @fontSize;
@@ -115,7 +116,6 @@ p {
 
         a {
             color: @headerColor;
-            text-decoration: none;
 
             &:hover {
                 color: white;
@@ -365,7 +365,6 @@ p {
     font-size: 30px;
 
     &__link {
-        text-decoration: none;
         line-height: 45px;
 
         &:before {
@@ -482,3 +481,83 @@ p {
         display: block;
     }
 }
+.error-404 {
+    overflow: hidden;
+    @errorHeight: 150px;
+    margin: auto;
+    margin-top: 2 * @headerHeight;
+    text-align: center;
+
+    &__number {
+        line-height: @errorHeight;
+        font-size: @errorHeight;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &__number_color_green {
+        color: @emerald;
+    }
+    &__number_color_blue {
+        color: @peterRiver;
+    }
+    &__ghost {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .ghost {
+        @headRadius: @errorHeight / 2.5;
+
+        .ghost__head {
+            border-radius: @headRadius;
+            background: @alizarin;
+            width: @headRadius * 2;
+            height: @headRadius * 2;
+            position: relative;
+        }
+        .ghost__eyes {
+            @eyeRadius: @headRadius / 5;
+            margin: auto;
+            overflow: hidden;
+            position: absolute;
+            left: @headRadius - 2 * @eyeRadius;
+            top: @headRadius - 2 * @eyeRadius;
+
+            .ghost__eye {
+                border-radius: @eyeRadius;
+                width: 2 * @eyeRadius;
+                height: 2 * @eyeRadius;
+                background: @clouds;
+                float: left;
+            }
+        }
+        .ghost__body {
+            margin-top: -@headRadius;
+            height: 1.5 * @headRadius;
+            width: 2 * @headRadius;
+            background: @alizarin;
+            position: relative;
+        }
+        .ghost__triangles {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .ghost__triangle {
+            @height: @headRadius / 5;
+            @width: @height * 2;
+            width: 0;
+            height: 0;
+            border-left: @width / 2 solid transparent;
+            border-right: @width / 2 solid transparent;
+            border-bottom: @height solid @clouds;
+            bottom: 0;
+            float: left;
+        }
+    }
+    &__message {
+        margin-top: @padding;
+        color: @midnightBlue;
+        font-size: 23px;
+    }
+}
+
