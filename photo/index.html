@@ -42,7 +42,7 @@
     <img class="image-area__image" src="" alt="">
 </div>
 <script>
-    var imageUrl = window.atob(decodeURIComponent(location.hash.replace('#', '')));
+    var imageUrl = window.atob(location.hash.replace('#', ''));
 
     document.querySelector('.image-area__placeholder').setAttribute('src', imageUrl);
     document.querySelector('.image-area__image').setAttribute('src', imageUrl);
