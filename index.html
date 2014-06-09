@@ -48,12 +48,8 @@ description: Основная задача VKfox - это уведомлять �
     <div class="slide__content">
         <div class="social-proof__title">Наши пользователи</div>
         <div class="social-proof__group">
-            <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?1"></script>
             <!-- VK Widget -->
             <div id="vk_groups"></div>
-            <script type="text/javascript">
-                VK.Widgets.Group("vk_groups", {mode: 0, width: "255"}, 10959001);
-            </script>
         </div>
         <div class="social-proof__reviews">
             <div class="review">
@@ -84,6 +80,10 @@ description: Основная задача VKfox - это уведомлять �
 <div class="slide thanks">
     <div class="slide__content">Счастливо!</div>
 </div>
+<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?1"></script>
+<script type="text/javascript">
+    VK.Widgets.Group("vk_groups", {mode: 0, width: "220", height: "342"}, 10959001);
+</script>
 <script src="js/bower.js"></script>
 <script>
     var installPath;
