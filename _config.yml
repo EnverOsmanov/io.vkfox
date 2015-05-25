@@ -1,6 +1,6 @@
 name: Your New Jekyll Site
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 host: 127.0.0.1
 port: 8888
 exclude: ['bower_components', 'Gemfile', 'Gemfile.lock', 'bower.json', '.gitignore', 'Gruntfile.js', 'package.json', '.grunt', 'node_modules']
